@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="0.1.0">
+    <!--  global changes in the layout -->
+    <default>
+        <reference name="root">
+            <remove name="header"/>
+            <block type="core/template" name="header_new" as="header" template="page/html/footer.phtml" />
+        </reference>
+       <reference name="header_new">
+            <block type="core/template" name="bg-footer" template="brightgrove/footer.phtml" />
+        </reference>
+        
+    </default>
+    <!-- This is for controller -->
     <brightgrove_alex_index_index translate="label">
         <label>Beach</label>
+        <reference name="root">
+            <remove name="footer"/>
+            <block type="core/template" name="footer_new" as="footer" template="page/html/footer.phtml" />
+        </reference>
         <reference name="content">
             <block name="list" type="brightgrove_alex/list" template="brightgrove/list.phtml" />
         </reference>
         <reference name="header">
-            <block name="header" type="brightgrove_alex/header" template="brightgrove/header.phtml" />
+            <block type="core/template" name="bg_header" template="brightgrove/header.phtml" />
         </reference>
-        <reference name="footer">
-            <block name="footer" type="brightgrove_alex/footer" template="brightgrove/footer.phtml" />
+        <!-- Ссылка на элемкнт -->
+        <reference name="footer_new">
+            <block type="core/template" name="bg-footer" template="brightgrove/footer.phtml" />
         </reference>
     </brightgrove_alex_index_index>
 </layout>
