@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Brightgrove_Alex>
+            <version>0.0.1</version>
+        </Brightgrove_Alex>
+    </modules>
+    <!-- Global  -->
+    <global>
+        <models>
+            <brightgrove_alex>
+                <class>Brightgrove_Alex_Model</class>
+            </brightgrove_alex>
+        </models>
+        <blocks>
+            <brightgrove_alex>
+                <class>Brightgrove_Alex_Block</class>
+            </brightgrove_alex>
+        </blocks>
+        <helpers>
+            <brightgrove_alex>
+                <class>Brightgrove_Alex_Helper</class>
+            </brightgrove_alex>
+        </helpers>
+        <resources>
+            <brightgrove_alex_setup>
+                <setup>
+                    <module>Brightgrove_Alex</module>
+                </setup>
+            </brightgrove_alex_setup>
+        </resources>
+    </global>
+    <!-- Frontend -->
+    <frontend>
+        <routers>
+            <brightgrove_alex>
+                <use>standard</use>
+                <args>
+                    <module>Brightgrove_Alex</module>
+                    <frontName>alex</frontName>
+                </args>
+            </brightgrove_alex>
+        </routers>
+        <layout>
+            <updates>
+                <brightgrove_alex>
+                    <file>brightgrove_alex.xml</file>
+                </brightgrove_alex>
+            </updates>
+        </layout>
+    </frontend>
+</config>
