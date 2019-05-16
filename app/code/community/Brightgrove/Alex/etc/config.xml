@@ -32,6 +32,16 @@
     </global>
     <!-- Frontend -->
     <frontend>
+        <events>
+            <controller_front_init_before>
+                <bg_event_init>
+                    
+                
+                </bg_event_init>
+            
+            </controller_front_init_before>
+        
+        </events>
         <routers>
             <brightgrove_alex>
                 <use>standard</use>

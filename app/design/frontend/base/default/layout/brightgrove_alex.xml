@@ -2,10 +2,6 @@
 <layout version="0.1.0">
     <!--  global changes in the layout -->
     <default>
-        <reference name="root">
-            <remove name="header"/>
-            <block type="core/template" name="header_new" as="header" template="page/html/footer.phtml" />
-        </reference>
        <reference name="header_new">
             <block type="core/template" name="bg-footer" template="brightgrove/footer.phtml" />
         </reference>
@@ -19,7 +15,7 @@
             <block type="core/template" name="footer_new" as="footer" template="page/html/footer.phtml" />
         </reference>
         <reference name="content">
-            <block name="list" type="brightgrove_alex/list" template="brightgrove/list.phtml" />
+            <block name="bg_list" type="brightgrove_alex/list" template="brightgrove/list.phtml" />
         </reference>
         <reference name="header">
             <block type="core/template" name="bg_header" template="brightgrove/header.phtml" />

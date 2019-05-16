@@ -1,1 +1,18 @@
+<?php 
+$quote = $this->getQuote();
+$items = $quote->getAllItems();
+$controllerId = $this->getControllerId();
+var_dump($controllerId);
+$dummyControllerId = $this->getDummyControllerId();
+var_dump($dummyControllerId);
+var_dump($this->getOrigData('id'));
+var_dump($this->getId());
+
+?>
+
 <h1>Content</h1>
+<?php foreach ($items as $key => $item):?>
+	<?php if($item instanceof Mage_Sales_Model_Quote_Item):?>
+		<div><?php echo $key . ' -> ' . $item->getName();?></div>
+	<?php endif;?>
+<?php endforeach;?>
